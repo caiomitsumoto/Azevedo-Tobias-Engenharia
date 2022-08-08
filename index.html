@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azevedo Tobias Engenharia</title>
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav id="navigation"> 
+      <div class="wrapper">
+        <a class="logo" href="#home">
+         <img src="./assets/logo.gif" alt="">
+        </a>
+
+        <div class="menu">
+          <ul>
+            <li><a class="active" onclick="closeMenu()" href="#home">Início</a></li>
+            <li><a onclick="closeMenu()" href="#services">Serviços</a></li>
+            <li><a onclick="closeMenu()" href="#projects">Projetos</a></li>
+            <li><a onclick="closeMenu()" href="#about">Sobre</a></li>
+          </ul>
+
+          <a class="button" onclick="closeMenu()" href="#contact"
+            >Agendar uma reunião</a
+          >
+
+          <ul class="social-links">
+            <li>
+              <a target="_blank" href="https://www.instagram.com/azevedotobias/"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.5 6.49997H17.51"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.facebook.com/azevedotobiasengenharia"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 1.99997H15C13.6739 1.99997 12.4021 2.52675 11.4645 3.46444C10.5268 4.40212 10 5.67389 10 6.99997V9.99997H7V14H10V22H14V14H17L18 9.99997H14V6.99997C14 6.73475 14.1054 6.4804 14.2929 6.29286C14.4804 6.10533 14.7348 5.99997 15 5.99997H18V1.99997Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+          
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.5396 6.42C22.4208 5.94541 22.1789 5.51057 21.8382 5.15941C21.4976 4.80824 21.0703 4.55318 20.5996 4.42C18.8796 4 11.9996 4 11.9996 4C11.9996 4 5.1196 4 3.3996 4.46C2.92884 4.59318 2.50157 4.84824 2.16094 5.19941C1.82031 5.55057 1.57838 5.98541 1.4596 6.46C1.14481 8.20556 0.990831 9.97631 0.999595 11.75C0.988374 13.537 1.14236 15.3213 1.4596 17.08C1.59055 17.5398 1.8379 17.9581 2.17774 18.2945C2.51758 18.6308 2.93842 18.8738 3.3996 19C5.1196 19.46 11.9996 19.46 11.9996 19.46C11.9996 19.46 18.8796 19.46 20.5996 19C21.0703 18.8668 21.4976 18.6118 21.8382 18.2606C22.1789 17.9094 22.4208 17.4746 22.5396 17C22.852 15.2676 23.0059 13.5103 22.9996 11.75C23.0108 9.96295 22.8568 8.1787 22.5396 6.42Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9.75 15.02L15.5 11.75L9.75 8.48001V15.02Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <button
+          aria-expanded="false"
+          aria-label="Abrir menu"
+          onclick="openMenu()"
+          class="open-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 20H30"
+              stroke="#FFFFFF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10 12H30"
+              stroke="#FFFFFF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M18 28L30 28"
+              stroke="#FFFFFF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button
+          aria-expanded="true"
+          aria-label="Fechar menu"
+          onclick="closeMenu()"
+          class="close-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M30 10L10 30M10 10L30 30"
+              stroke="#FFFAF1"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <section id="home">
+      <div class="wrapper">
+
+      <div class="col-a">
+        <header>
+          <h4>SEJA BEM VINDO AO WEB-SITE DA </h4> 
+          <span>AZEVEDO TOBIAS ENGENHARIA</span>
+          <h1>Assistência simplificada para todos</h1>
+        </header>
+
+        <div class="content">
+          <p>
+            Os profissionais da Azevedo Tobias Engenharia estão sempre prontos para executar obras e projetos a fim de proporcionar conforto, segurança em comodidade aos nossos clientes.
+          </p>
+          <a class="button" href="#contact">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.8337 10.6667C12.667 10.5833 11.5837 10.0833 11.417 10C11.2503 9.91668 11.0837 9.91668 10.917 10.0833C10.7503 10.25 10.417 10.75 10.2503 10.9167C10.167 11.0833 10.0003 11.0833 9.83366 11C9.25033 10.75 8.66699 10.4167 8.16699 10C7.75033 9.58334 7.33366 9.08334 7.00033 8.58334C6.91699 8.41668 7.00033 8.25001 7.08366 8.16668C7.16699 8.08334 7.25033 7.91668 7.41699 7.83334C7.50033 7.75001 7.58366 7.58334 7.58366 7.50001C7.66699 7.41668 7.66699 7.25001 7.58366 7.16668C7.50033 7.08334 7.08366 6.08334 6.91699 5.66668C6.83366 5.08334 6.66699 5.08334 6.50033 5.08334C6.41699 5.08334 6.25033 5.08334 6.08366 5.08334C5.91699 5.08334 5.66699 5.25001 5.58366 5.33334C5.08366 5.83334 4.83366 6.41668 4.83366 7.08334C4.91699 7.83334 5.16699 8.58334 5.66699 9.25001C6.58366 10.5833 7.75033 11.6667 9.16699 12.3333C9.58366 12.5 9.91699 12.6667 10.3337 12.75C10.7503 12.9167 11.167 12.9167 11.667 12.8333C12.2503 12.75 12.7503 12.3333 13.0837 11.8333C13.2503 11.5 13.2503 11.1667 13.167 10.8333C13.167 10.8333 13.0003 10.75 12.8337 10.6667ZM14.917 3.08334C11.667 -0.166656 6.41699 -0.166656 3.16699 3.08334C0.500325 5.75001 0.000325501 9.83334 1.83366 13.0833L0.666992 17.3333L5.08366 16.1667C6.33366 16.8333 7.66699 17.1667 9.00033 17.1667C13.5837 17.1667 17.2503 13.5 17.2503 8.91668C17.3337 6.75001 16.417 4.66668 14.917 3.08334ZM12.667 14.75C11.5837 15.4167 10.3337 15.8333 9.00033 15.8333C7.75033 15.8333 6.58366 15.5 5.50033 14.9167L5.25033 14.75L2.66699 15.4167L3.33366 12.9167L3.16699 12.6667C1.16699 9.33334 2.16699 5.16668 5.41699 3.08334C8.66699 1.00001 12.8337 2.08334 14.8337 5.25001C16.8337 8.50001 15.917 12.75 12.667 14.75Z"
+                fill="white"
+              />
+            </svg>
+
+            Agendar uma reunião
+          </a>
+
+        </div>
+      </div>
+        <div class="col-b"> 
+        <img
+        src="./img/man-with-blueprints-helmet.png"
+        alt=""
+        />
+      </div>
+
+
+        <div class="stats">
+          <div class="stat">
+            <h3>+100</h3>
+            <p>Obras concluidas</p>
+          </div>
+
+          <div class="stat">
+            <h3>+15</h3>
+            <p>Especialista disponiveis</p>
+          </div>
+
+          <div class="stat">
+            <h3>+3</h3>
+            <p>Anos no mercado</p>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrapper">
+        <header>
+          <h4>Serviços</h4>
+          <h2>A Azevedo Tobias Engenharia exerce forte atuação em algumas áreas da Engenharia Civil, entre elas:</h2>
+        </header>
+        <div class="content">
+          <div class="cards">
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <h3>Construção Civil</h3>
+              <p>
+                Um seguimento considerado clássico na Engenharia Civil. Essa é a área responsável pelos processos construtivos, desde da escolha de materiais, edificação até o acabamento. Aplicando e desenvolvendo projetos em obras de edifícios, casas, fábricas, dentre outras.
+
+              </p>
+            </div>
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <h3>Cálculo Estrutural</h3>
+              <p>
+                É o engenheiro que cuida das planilhas e cálculos relacionados à resistências dos materiais, estruturas do concreto, metálicas, madeiras, aço, argamassas em todos os tipos de construção, como pontes, por exemplo. São os responsáveis pelos cuidados de manterem uma construção firme, bem estruturada e estável.
+
+              </p>
+            </div>
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <h3>Geotecnia</h3>
+              <p>
+                Área voltada para a mecânica dos solos que podem influenciar na infraestrutura de uma construção com em escavações, fundações e barragens. São os engenheiros responsáveis por estudar o solo e desenvolver um acompanhamento para o bom funcionamento da obra.
+              </p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <section id="projects">
+    <header>
+      <h4>Projetos</h4>
+      <h2>Confira alguns de nossos projetos realizados:</h2>
+    </header>
+    <div class="wrapper">
+       <div class="col-a">
+        <div id="slider">
+          <input type="radio" name="slider" id="slide1" checked>
+          <input type="radio" name="slider" id="slide2">
+          <input type="radio" name="slider" id="slide3">
+          <input type="radio" name="slider" id="slide4">
+          <div id="slides">
+             <div id="overflow">
+                <div class="inner">
+                   <div class="slide slide_1">
+                      <div class="slide-content">
+                         <img src="./img/Centro 1.png" alt="Centro 1">
+                      </div>
+                   </div>
+                   <div class="slide slide_2">
+                      <div class="slide-content">
+                         <img src="./img/Centro 2.png" alt="Centro 2">
+                      </div>
+                   </div>
+                   <div class="slide slide_3">
+                      <div class="slide-content">
+                         <img src="./img/Centro 3.png" alt="Centro 3">
+                      </div>
+                   </div>
+                   <div class="slide slide_4">
+                      <div class="slide-content">
+                         <img src="./img/Centro 4.png" alt="Centro 4">
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div id="controls">
+             <label for="slide1"></label>
+             <label for="slide2"></label>
+             <label for="slide3"></label>
+             <label for="slide4"></label>
+          </div>
+          <div id="bullets">
+             <label for="slide1"></label>
+             <label for="slide2"></label>
+             <label for="slide3"></label>
+             <label for="slide4"></label>
+          </div>
+       </div>
+      </div>
+
+      
+      <div class="col-b">
+        <div id="slider2">
+          <input type="radio" name="slider" id="slide5" checked>
+          <input type="radio" name="slider" id="slide6">
+          <input type="radio" name="slider" id="slide7">
+          <input type="radio" name="slider" id="slide8">
+          <div id="slides2">
+             <div id="overflow2">
+                <div class="inner">
+                   <div class="slide slide_1">
+                      <div class="slide-content">
+                         <img src="./img/Escola 1.png" alt="Escola 1">
+                      </div>
+                   </div>
+                   <div class="slide slide_2">
+                      <div class="slide-content">
+                         <img src="./img/Escola 2.png" alt="Escola 2">
+                      </div>
+                   </div>
+                   <div class="slide slide_3">
+                      <div class="slide-content">
+                         <img src="./img/Escola 3.png" alt="Escola 3">
+                      </div>
+                   </div>
+                   <div class="slide slide_4">
+                      <div class="slide-content">
+                         <img src="./img/Escola 4.png" alt="Escola 4">
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div id="controls2">
+             <label for="slide5"></label>
+             <label for="slide6"></label>
+             <label for="slide7"></label>
+             <label for="slide8"></label>
+          </div>
+          <div id="bullets2">
+             <label for="slide5"></label>
+             <label for="slide6"></label>
+             <label for="slide7"></label>
+             <label for="slide8"></label>
+          </div>
+       </div>
+    </div>  
+
+
+    <div class="col-c" id="col-inv">
+      <div id="slider3">
+        <input type="radio" name="slider" id="slide9" checked>
+        <input type="radio" name="slider" id="slide10">
+        <input type="radio" name="slider" id="slide11">
+        <input type="radio" name="slider" id="slide12">
+        <div id="slides3">
+           <div id="overflow3">
+              <div class="inner">
+                 <div class="slide slide_1">
+                    <div class="slide-content">
+                       <img src="./img/Ginasio 1.png" alt="Ginasio 1">
+                    </div>
+                 </div>
+                 <div class="slide slide_2">
+                    <div class="slide-content">
+                       <img src="./img/Ginasio 2.png" alt="Ginasio 2">
+                    </div>
+                 </div>
+                 <div class="slide slide_3">
+                    <div class="slide-content">
+                       <img src="./img/Ginasio 3.png" alt="Ginasio 3">
+                    </div>
+                 </div>
+                 <div class="slide slide_4">
+                    <div class="slide-content">
+                       <img src="./img/Ginasio 4.png" alt="Ginasio 4">
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div id="controls3">
+           <label for="slide9"></label>
+           <label for="slide10"></label>
+           <label for="slide11"></label>
+           <label for="slide12"></label>
+        </div>
+        <div id="bullets3">
+           <label for="slide9"></label>
+           <label for="slide10"></label>
+           <label for="slide11"></label>
+           <label for="slide12"></label>
+        </div>
+     </div>
+
+     <div id="slider5">
+      <input type="radio" name="slider" id="slide17" checked>
+      <input type="radio" name="slider" id="slide18">
+      <input type="radio" name="slider" id="slide19">
+      <input type="radio" name="slider" id="slide20">
+      <div id="slides5">
+         <div id="overflow5">
+            <div class="inner">
+               <div class="slide slide_1">
+                  <div class="slide-content">
+                     <img src="./img/Piscina 1.png" alt="Piscina 1">
+                  </div>
+               </div>
+               <div class="slide slide_2">
+                  <div class="slide-content">
+                     <img src="./img/Piscina 2.png" alt="Piscina 2">
+                  </div>
+               </div>
+               <div class="slide slide_3">
+                  <div class="slide-content">
+                     <img src="./img/Piscina 3.png" alt="Piscina 3">
+                  </div>
+               </div>
+               <div class="slide slide_4">
+                  <div class="slide-content">
+                     <img src="./img/Piscina 4.png" alt="Piscina 4">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="controls5">
+         <label for="slide17"></label>
+         <label for="slide18"></label>
+         <label for="slide19"></label>
+         <label for="slide20"></label>
+      </div>
+      <div id="bullets5">
+         <label for="slide17"></label>
+         <label for="slide18"></label>
+         <label for="slide19"></label>
+         <label for="slide20"></label>
+      </div>
+   </div>
+    </div>
+      
+    <div class="col-d" id="col-inv">
+      <div id="slider4">
+        <input type="radio" name="slider" id="slide13" checked>
+        <input type="radio" name="slider" id="slide14">
+        <input type="radio" name="slider" id="slide15">
+        <input type="radio" name="slider" id="slide16">
+        <div id="slides4">
+           <div id="overflow4">
+              <div class="inner">
+                 <div class="slide slide_1">
+                    <div class="slide-content">
+                       <img src="./img/foto21 (1).png" alt="Casa 1">
+                    </div>
+                 </div>
+                 <div class="slide slide_2">
+                    <div class="slide-content">
+                       <img src="./img/foto 2.png" alt="Casa 2">
+                    </div>
+                 </div>
+                 <div class="slide slide_3">
+                    <div class="slide-content">
+                       <img src="./img/foto 9.png" alt="Casa 3">
+                    </div>
+                 </div>
+                 <div class="slide slide_4">
+                    <div class="slide-content">
+                       <img src="./img/foto 17.png" alt="Casa 4">
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div id="controls4">
+           <label for="slide13"></label>
+           <label for="slide14"></label>
+           <label for="slide15"></label>
+           <label for="slide16"></label>
+        </div>
+        <div id="bullets4">
+           <label for="slide13"></label>
+           <label for="slide14"></label>
+           <label for="slide15"></label>
+           <label for="slide16"></label>
+        </div>
+     </div>
+     <div id="slider6">
+      <input type="radio" name="slider" id="slide21" checked>
+      <input type="radio" name="slider" id="slide22">
+      <input type="radio" name="slider" id="slide23">
+      <input type="radio" name="slider" id="slide24">
+      <div id="slides6">
+         <div id="overflow6">
+            <div class="inner">
+               <div class="slide slide_1">
+                  <div class="slide-content">
+                     <img src="./img//Quadra 1.png" alt="Quadra 1">
+                  </div>
+               </div>
+               <div class="slide slide_2">
+                  <div class="slide-content">
+                     <img src="./img/Quadra 2.png" alt="Quadra 2">
+                  </div>
+               </div>
+               <div class="slide slide_3">
+                  <div class="slide-content">
+                     <img src="./img/Quadra 3.png" alt="Quadra 3">
+                  </div>
+               </div>
+               <div class="slide slide_4">
+                  <div class="slide-content">
+                     <img src="./img/Quadra 4.png" alt="Quadra 4">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="controls6">
+         <label for="slide21"></label>
+         <label for="slide22"></label>
+         <label for="slide23"></label>
+         <label for="slide24"></label>
+      </div>
+      <div id="bullets6">
+         <label for="slide21"></label>
+         <label for="slide22"></label>
+         <label for="slide23"></label>
+         <label for="slide24"></label>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div id="load-more"> Ver mais</div>
+    </section>
+
+    <section id="about">
+      <div class="wrapper">
+        <div class="col-a">
+        <header>
+          <h4>SOBRE NÓS</h4>
+          <h2>Entenda quem somos e como surgimos:</h2>
+        </header>
+        <div class="content">
+          <p>
+            A Azevedo Tobias Engenharia iniciou suas atividades em Janeiro de 2019 com o intuito de atender nossos Clientes com o que há de mais moderno e seguro em Construção Civil.
+            Contando com uma equipe de profissionais gabaritados para executar diversos projetos com qualidade, responsabilidade e zelo, conforme os desafios que a Construção Civil moderna apresenta em nossos dias.
+            Nossa Missão é
+            executar obras e projetos a fim de proporcionar conforto, segurança em comodidade aos nossos clientes.
+           
+          </p>
+        </div>
+      </div>
+    
+
+      <div class="col-b">
+      <img
+         src="./img/pexels-nappy-935977 (1) 1.png" alt="doutor feliz segurando uma prancheta com pacientes"
+       /> 
+      </div>
+    </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrapper">
+        <div class="col-a">
+        <header>
+          <h2>Entre em contato com a gente!</h2>
+        </header>
+
+        <div class="content">
+          <ul>
+            <li>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
+                  stroke="#00856F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+                  stroke="#00856F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Rua Victor do Amaral,nº 1006
+              JD. Alvorada 3 CEP: 87035-230
+              Maringá - Paraná
+            </li>
+            <li>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                  stroke="#00856F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M22 6L12 13L2 6"
+                  stroke="#00856F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              administrativo@azevedotobias.com.br
+            </li>
+            <li>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 17.697C21 18.021 20.9279 18.354 20.7747 18.678C20.6214 19.002 20.4231 19.308 20.1617 19.596C19.7201 20.082 19.2334 20.433 18.6835 20.658C18.1427 20.883 17.5568 21 16.9259 21C16.0065 21 15.024 20.784 13.9875 20.343C12.9509 19.902 11.9144 19.308 10.8868 18.561C9.85028 17.805 8.8678 16.968 7.9304 16.041C7.002 15.105 6.16375 14.124 5.41562 13.098C4.67651 12.072 4.08162 11.046 3.64897 10.029C3.21632 9.003 3 8.022 3 7.086C3 6.474 3.10816 5.889 3.32449 5.349C3.54081 4.8 3.88333 4.296 4.36104 3.846C4.93791 3.279 5.56885 3 6.23585 3C6.48823 3 6.74061 3.054 6.96595 3.162C7.2003 3.27 7.40761 3.432 7.56986 3.666L9.66099 6.609C9.82324 6.834 9.94041 7.041 10.0215 7.239C10.1027 7.428 10.1477 7.617 10.1477 7.788C10.1477 8.004 10.0846 8.22 9.95844 8.427C9.84126 8.634 9.67001 8.85 9.45368 9.066L8.76865 9.777C8.6695 9.876 8.62444 9.993 8.62444 10.137C8.62444 10.209 8.63345 10.272 8.65148 10.344C8.67852 10.416 8.70556 10.47 8.72359 10.524C8.88583 10.821 9.16525 11.208 9.56184 11.676C9.96745 12.144 10.4001 12.621 10.8688 13.098C11.3555 13.575 11.8242 14.016 12.302 14.421C12.7707 14.817 13.1582 15.087 13.4647 15.249C13.5098 15.267 13.5638 15.294 13.6269 15.321C13.699 15.348 13.7712 15.357 13.8523 15.357C14.0055 15.357 14.1227 15.303 14.2218 15.204L14.9069 14.529C15.1322 14.304 15.3485 14.133 15.5558 14.025C15.7631 13.899 15.9705 13.836 16.1958 13.836C16.3671 13.836 16.5473 13.872 16.7456 13.953C16.9439 14.034 17.1512 14.151 17.3766 14.304L20.36 16.419C20.5944 16.581 20.7566 16.77 20.8558 16.995C20.9459 17.22 21 17.445 21 17.697Z" stroke="#1B1B1B" stroke-width="1.5" stroke-miterlimit="10"/>
+                </svg>
+                +55 (44) 3268-3551
+            </li>
+          </ul>
+
+          <a class="button" href="https://wa.me/554432683551" target="_blank">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.6 14.0001C16.4 13.9001 15.1 13.3001 14.9 13.2001C14.7 13.1001 14.5 13.1001 14.3 13.3001C14.1 13.5001 13.7 14.1001 13.5 14.3001C13.4 14.5001 13.2 14.5001 13 14.4001C12.3 14.1001 11.6 13.7001 11 13.2001C10.5 12.7001 10 12.1001 9.6 11.5001C9.5 11.3001 9.6 11.1001 9.7 11.0001C9.8 10.9001 9.9 10.7001 10.1 10.6001C10.2 10.5001 10.3 10.3001 10.3 10.2001C10.4 10.1001 10.4 9.9001 10.3 9.8001C10.2 9.7001 9.7 8.5001 9.5 8.0001C9.4 7.3001 9.2 7.3001 9 7.3001C8.9 7.3001 8.7 7.3001 8.5 7.3001C8.3 7.3001 8 7.5001 7.9 7.6001C7.3 8.2001 7 8.9001 7 9.7001C7.1 10.6001 7.4 11.5001 8 12.3001C9.1 13.9001 10.5 15.2001 12.2 16.0001C12.7 16.2001 13.1 16.4001 13.6 16.5001C14.1 16.7001 14.6 16.7001 15.2 16.6001C15.9 16.5001 16.5 16.0001 16.9 15.4001C17.1 15.0001 17.1 14.6001 17 14.2001C17 14.2001 16.8 14.1001 16.6 14.0001ZM19.1 4.9001C15.2 1.0001 8.9 1.0001 5 4.9001C1.8 8.1001 1.2 13.0001 3.4 16.9001L2 22.0001L7.3 20.6001C8.8 21.4001 10.4 21.8001 12 21.8001C17.5 21.8001 21.9 17.4001 21.9 11.9001C22 9.3001 20.9 6.8001 19.1 4.9001ZM16.4 18.9001C15.1 19.7001 13.6 20.2001 12 20.2001C10.5 20.2001 9.1 19.8001 7.8 19.1001L7.5 18.9001L4.4 19.7001L5.2 16.7001L5 16.4001C2.6 12.4001 3.8 7.4001 7.7 4.9001C11.6 2.4001 16.6 3.7001 19 7.5001C21.4 11.4001 20.3 16.5001 16.4 18.9001Z"
+                fill="black"
+              />
+            </svg>
+
+            Agende uma reunião
+          </a>
+        </div>
+      </div>
+
+      <div class="clas-b">
+         <div class="column rigth">
+          <div class="text"></div>
+          <form action="https://formsubmit.co/administrativo@azevedotobias.com.br" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <div class="fields">
+              <div class="field name">
+                <input type="text" name="nome" placeholder="Nome" required>
+              </div>
+            </div>
+            <div class="fields">
+              <div class="field contact">
+                <input type="number" name="Numero" placeholder="(ddd)Telefone"  required>
+              </div>
+              <div class="field email">
+                <input type="email" name="email" placeholder="E-mail" required>
+              </div>
+            </div>
+            <div class="fields">
+              <div class="field city">
+                <input type="text" name="Cidade" placeholder="Cidade" required>
+              </div>
+              <div class="field state">
+                <select id="uf" name="Estado" class="fields" required>
+                  <option value="">Selecione o Estado</option>
+                  <option value="AC">Acre</option>
+                  <option value="AL">Alagoas</option>
+                  <option value="AP">Amapá</option>
+                  <option value="AM">Amazonas</option>
+                  <option value="BA">Bahia</option>
+                  <option value="CE">Ceará</option>
+                  <option value="DF">Distrito Federal</option>
+                  <option value="ES">Espírito Santo</option>
+                  <option value="GO">Goiás</option>
+                  <option value="MA">Maranhão</option>
+                  <option value="MT">Mato Grosso</option>
+                  <option value="MS">Mato Grosso do Sul</option>
+                  <option value="MG">Minas Gerais</option>
+                  <option value="PA">Pará</option>
+                  <option value="PB">Paraíba</option>
+                  <option value="PR">Paraná</option>
+                  <option value="PE">Pernambuco</option>
+                  <option value="PI">Piauí</option>
+                  <option value="RJ">Rio de Janeiro</option>
+                  <option value="RN">Rio Grande do Norte</option>
+                  <option value="RS">Rio Grande do Sul</option>
+                  <option value="RO">Rondônia</option>
+                  <option value="RR">Roraima</option>
+                  <option value="SC">Santa Catarina</option>
+                  <option value="SP">São Paulo</option>
+                  <option value="SE">Sergipe</option>
+                  <option value="TO">Tocantins</option>
+                  <option value="EX">Estrangeiro</option>
+              </select>
+              </div>
+              
+            </div>
+            <div class="field">
+              <div class="field textarea">
+                <textarea name="Mensagem" id="Mensagem" cols="30" rows="10" placeholder="Mensagem"></textarea>
+              </div>
+              <div class="button" id="button-field">
+                <button type="submit">Enviar</button>
+              </div>
+            </div>
+          </form>
+         </div>
+        
+      </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrapper">
+        <div class="col-a">
+        <a class="logo" href="#home">
+         <img src="./assets/logo.png" alt="">
+        </a>
+
+        <p>
+          ©2022 Azevedo Tobia Engenharia. <br />
+          Todos os direitos reservados.
+        </p>
+      </div>
+      <div class="col-b">
+        <ul class="social-links">
+          <li>
+            <a target="_blank" href="https://www.instagram.com/azevedotobias/"
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M17.5 6.49997H17.51"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.facebook.com/azevedotobiasengenharia/"
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18 1.99997H15C13.6739 1.99997 12.4021 2.52675 11.4645 3.46444C10.5268 4.40212 10 5.67389 10 6.99997V9.99997H7V14H10V22H14V14H17L18 9.99997H14V6.99997C14 6.73475 14.1054 6.4804 14.2929 6.29286C14.4804 6.10533 14.7348 5.99997 15 5.99997H18V1.99997Z"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+            
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M22.5396 6.42C22.4208 5.94541 22.1789 5.51057 21.8382 5.15941C21.4976 4.80824 21.0703 4.55318 20.5996 4.42C18.8796 4 11.9996 4 11.9996 4C11.9996 4 5.1196 4 3.3996 4.46C2.92884 4.59318 2.50157 4.84824 2.16094 5.19941C1.82031 5.55057 1.57838 5.98541 1.4596 6.46C1.14481 8.20556 0.990831 9.97631 0.999595 11.75C0.988374 13.537 1.14236 15.3213 1.4596 17.08C1.59055 17.5398 1.8379 17.9581 2.17774 18.2945C2.51758 18.6308 2.93842 18.8738 3.3996 19C5.1196 19.46 11.9996 19.46 11.9996 19.46C11.9996 19.46 18.8796 19.46 20.5996 19C21.0703 18.8668 21.4976 18.6118 21.8382 18.2606C22.1789 17.9094 22.4208 17.4746 22.5396 17C22.852 15.2676 23.0059 13.5103 22.9996 11.75C23.0108 9.96295 22.8568 8.1787 22.5396 6.42Z"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9.75 15.02L15.5 11.75L9.75 8.48001V15.02Z"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </footer>
+
+    <a id="backToTopButton" href="#home">
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="20" cy="20" r="20" fill="#00856F" />
+        <path
+          d="M20 27V13"
+          stroke="hsl( 59, 100%, 75%)"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M13 20L20 13L27 20"
+          stroke="hsl( 59, 100%, 75%)"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
